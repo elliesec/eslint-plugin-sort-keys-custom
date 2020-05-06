@@ -1,6 +1,6 @@
 # eslint-plugin-sort-keys-fix
 
-Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled
+An ESLint rule that allows a customised sort order to be specified for object keys with an autofix available. Forked from [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix#readme).
 
 ## Installation
 
@@ -24,7 +24,7 @@ Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration fil
 
 ```json
 {
-    "plugins": ["sort-keys-fix"]
+    "plugins": ["sort-keys-custom"]
 }
 ```
 
@@ -33,12 +33,12 @@ Then add sort-keys-fix rule under the rules section.
 ```json
 {
     "rules": {
-        "sort-keys-fix/sort-keys-fix": "warn"
+        "sort-keys-custom/sort-keys-custom": "warn"
     }
 }
 ```
 
-Often it makes sense to enable `sort-keys-fix` only for certain files/directories. For cases like that, use override key of eslint config:
+Often it makes sense to enable `sort-keys-custom` only for certain files/directories. For cases like that, use override key of eslint config:
 
 ```jsonc
 {
@@ -49,7 +49,7 @@ Often it makes sense to enable `sort-keys-fix` only for certain files/directorie
         {
             "files": ["src/alphabetical.js", "bin/*.js", "lib/*.js"],
             "rules": {
-                "sort-keys-fix/sort-keys-fix": "warn"
+                "sort-keys-custom/sort-keys-custom": "warn"
             }
         }
     ]
