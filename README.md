@@ -24,12 +24,9 @@ Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration fil
 
 ```json
 {
-  "plugins": [
-    "sort-keys-fix"
-  ]
+    "plugins": ["sort-keys-fix"]
 }
 ```
-
 
 Then add sort-keys-fix rule under the rules section.
 
@@ -45,25 +42,20 @@ Often it makes sense to enable `sort-keys-fix` only for certain files/directorie
 
 ```jsonc
 {
-  "rules": {
-    // ...
-  },
-  "overrides": [
-    {
-      "files": ["src/alphabetical.js", "bin/*.js", "lib/*.js"],
-      "rules": {
-        "sort-keys-fix/sort-keys-fix": "warn"
-      }
-    }
-  ]
+    "rules": {
+        // ...
+    },
+    "overrides": [
+        {
+            "files": ["src/alphabetical.js", "bin/*.js", "lib/*.js"],
+            "rules": {
+                "sort-keys-fix/sort-keys-fix": "warn"
+            }
+        }
+    ]
 }
 ```
 
 ## Rule configuration
 
 For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys`, besides `minKeys`, are supported by `sort-keys-fix`.
-
-
-
-
-
